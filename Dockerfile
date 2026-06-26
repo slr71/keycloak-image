@@ -11,6 +11,10 @@ ENV KC_HTTP_RELATIVE_PATH=/auth
 ENV KC_DB=postgres
 
 WORKDIR /opt/keycloak
+
+# Add the AI Sandbox authenticator provider JAR.
+COPY ai-sandbox-authenticator-0.1.0-standalone.jar /opt/keycloak/providers/
+
 RUN /opt/keycloak/bin/kc.sh build
 
 FROM quay.io/keycloak/keycloak:26.6
