@@ -1,5 +1,5 @@
 repotag := "harbor.cyverse.org/de/keycloak:26.6"
-authenticator-dir := "../ai-sandbox-authenticator"
+authenticator-dir := justfile_directory() + "/../ai-sandbox-authenticator"
 authenticator-jar := "ai-sandbox-authenticator-0.1.0-standalone.jar"
 
 build:
