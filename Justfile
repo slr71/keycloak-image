@@ -7,7 +7,7 @@ build:
     cp "{{authenticator-dir}}/target/{{authenticator-jar}}" .
     rm -rf themes/ai-sandbox
     cp -r "{{authenticator-dir}}/resources/theme/ai-sandbox" themes/
-    docker buildx build --platform linux/amd64 -t "{{repotag}}" .
+    docker buildx build --no-cache --platform linux/amd64 -t "{{repotag}}" .
     rm -f "{{authenticator-jar}}"
 
 push:
